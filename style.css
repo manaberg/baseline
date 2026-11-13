@@ -1,0 +1,116 @@
+:root {
+  --canvas: #0a0a0a;
+  --panel: #151515;
+  --edge: #2a2a28;
+  --ink: #f2f0ea;
+  --ink-2: #b4b2ac;
+  --ink-3: #8a8882;
+  --accent: #ff5f1f;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --sans: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--ink);
+  font: 17px/1.6 var(--sans);
+}
+
+main {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 48px 16px 80px;
+}
+
+.wordmark {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font: 700 13px var(--mono);
+  letter-spacing: 0.24em;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.wordmark::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 28px 0 8px;
+}
+
+.lede { color: var(--ink-2); margin: 0 0 32px; }
+
+h2 {
+  font: 600 13px var(--mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 40px 0 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--edge);
+}
+
+h2 .index { color: var(--accent); margin-right: 10px; }
+
+p, li { color: var(--ink-2); }
+strong { color: var(--ink); font-weight: 600; }
+ul { padding-left: 20px; }
+li { margin: 6px 0; }
+
+a { color: var(--accent); }
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--edge);
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin: 16px 0;
+}
+
+.panel p { margin: 0; }
+
+.meta {
+  font: 12px var(--mono);
+  letter-spacing: 0.06em;
+  color: var(--ink-3);
+  text-transform: uppercase;
+}
+
+nav.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+nav.links a {
+  font: 600 12px var(--mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink);
+  border: 1px solid var(--edge);
+  background: var(--panel);
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+
+footer {
+  margin-top: 56px;
+  font: 12px var(--mono);
+  color: var(--ink-3);
+}
